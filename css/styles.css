@@ -1,0 +1,917 @@
+:root {
+  --black: #000;
+  --white: #fff;
+  --grey:
+    linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%),
+    #dbdbdb;
+
+  --font: "Alfa Slab One", serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+h7,
+h8,
+p {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* COVER */
+.cover {
+  background-color: black;
+  justify-content: center;
+  align-items: center;
+  height: 986px;
+  position: relative; /* per posicionar les imatges dins (also searched with AI)*/
+  overflow: hidden;
+}
+h1 {
+  width: 1180px;
+  height: 363px;
+  color: #fff;
+  font-family: "Alfa Slab One";
+  font-size: 350px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 66.5px;
+}
+
+.cover-title1 {
+  position: absolute;
+  top: 86px;
+  left: 156px;
+  right: 157px;
+  display: inline-flex;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  position: absolute; /* searched with AI because i didn't know how to put the title under the image*/
+  top: 86px;
+  left: 156px;
+  z-index: 1;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.container-photo1 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+h2 {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 938px;
+  height: 315px;
+  color: #fff;
+  font-family: "Alfa Slab One";
+  font-size: 300px;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 57px;
+  text-align: center;
+  z-index: 3;
+}
+
+/* INDEX */
+.index {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
+  justify-items: center;
+  align-items: center;
+  column-gap: 0;
+  row-gap: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.index1-hover,
+.index2-hover,
+.index3-hover,
+.index4-hover {
+  position: relative;
+  display: inline-block; /* ocupa només l'espai exacte de la imatge */
+  line-height: 0;
+}
+
+.index1-hover img,
+.index2-hover img,
+.index3-hover img,
+.index4-hover img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.index1-hover .color,
+.index2-hover .color,
+.index3-hover .color,
+.index4-hover .color {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.index1-hover:hover .color,
+.index2-hover:hover .color,
+.index3-hover:hover .color,
+.index4-hover:hover .color {
+  opacity: 1;
+}
+
+/* MY PROJECTS*/
+.myprojects {
+  background-color: black;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+h3 {
+  width: 1180px;
+  height: 363px;
+  color: #fff;
+  font-family: "Alfa Slab One";
+  font-size: 350px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 66.5px;
+}
+
+h4 {
+  align-self: stretch;
+  color: #fff;
+  font-family: "Alfa Slab One";
+  font-size: 190px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 36.1px;
+}
+
+/* artists */
+.artist-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: 50px;
+  align-items: center;
+  gap: 20px;
+}
+h5 {
+  display: flex;
+  width: 450px;
+  padding: 10px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+  -webkit-text-stroke-width: 5px;
+  -webkit-text-stroke-color: var(--white, #fff);
+  font-family: "Alfa Slab One";
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+/* artist 1*/
+
+.artist-1 {
+  display: flex;
+  width: max-content;
+  gap: 0;
+  animation: moveArtist 25s linear infinite; /* AI research */
+}
+
+.artist1 {
+  height: 300px;
+  width: auto;
+  flex-shrink: 0;
+  display: block;
+  height: 300px;
+  align-self: stretch;
+}
+
+@keyframes moveArtist {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* artist 2*/
+.artist-2 {
+  display: flex;
+  width: max-content;
+  gap: 0;
+  animation: moveRight 50s linear infinite;
+}
+
+.artist-2 img {
+  height: 300px;
+  width: auto;
+  flex-shrink: 0;
+  display: block;
+}
+
+@keyframes moveRight {
+  from {
+    transform: translateX(-50%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* artist 3*/
+
+.artist-3 {
+  display: flex;
+  width: max-content;
+  gap: 0;
+  animation: moveLeft 25s linear infinite;
+}
+
+.artist-3 img {
+  height: 300px;
+  width: auto;
+  flex-shrink: 0;
+  display: block;
+}
+
+@keyframes moveLeft {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.artist1-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+
+  color: white;
+  opacity: 50%;
+  font-family: "Alfa Slab One";
+  font-size: 200px;
+  font-weight: 400;
+  white-space: nowrap;
+  margin: 0;
+  pointer-events: none;
+}
+.artist2-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+
+  color: white;
+  opacity: 50%;
+  font-family: "Alfa Slab One";
+  font-size: 200px;
+  font-weight: 400;
+  white-space: nowrap;
+  margin: 0;
+  pointer-events: none;
+}
+
+.artist3-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+
+  color: white;
+  opacity: 50%;
+  font-family: "Alfa Slab One";
+  font-size: 200px;
+  font-weight: 400;
+  white-space: nowrap;
+  margin: 0;
+  pointer-events: none;
+}
+
+/* CROWD */
+.crowd {
+  position: relative;
+  height: 1100px;
+  width: 100%;
+  left: 0px;
+  overflow: hidden;
+}
+
+/* video */
+.crowd-video {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 1100px;
+  width: 100%;
+  align-self: stretch;
+}
+/* title */
+.crowd-title {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+}
+
+/* title letter */
+.C {
+  position: absolute;
+  top: 5px;
+  left: 57px;
+}
+
+.R {
+  position: absolute;
+  top: 211px;
+  left: 300px;
+}
+.O {
+  position: absolute;
+  top: 380px;
+  left: 558px;
+}
+.W {
+  position: absolute;
+  top: 561px;
+  left: 813px;
+}
+.D {
+  position: absolute;
+  top: 656px;
+  left: 1193px;
+}
+
+.text a {
+  position: relative;
+  background-color: black;
+  border: 2px solid white;
+  padding: 24px 40px;
+  display: inline-block;
+  border-radius: 40px;
+  transition: 0.3s all;
+}
+
+.text a:hover {
+  background-color: var(--white);
+  transform: translateY(-5px);
+}
+
+.button {
+  position: absolute;
+  z-index: 3;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  background-color: black;
+  color: white;
+  border: 2px solid white;
+  padding: 24px 40px;
+  display: inline-block;
+  border-radius: 40px;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.button:hover {
+  background-color: white;
+  color: black;
+  transform: translate(-50%, -5px);
+  box-shadow: 0 12px 26px rgba(255, 255, 255, 0.25);
+}
+
+.button:focus-visible {
+  outline: 3px solid white;
+  outline-offset: 4px;
+}
+
+/* gallery */
+.modal-gallery {
+  display: none;
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+  z-index: 999;
+  justify-content: center;
+  align-items: center;
+}
+
+/* box */
+.modal-content {
+  position: relative;
+  background-color: #111;
+  border: 2px solid white;
+  padding: 30px;
+  border-radius: 20px;
+  max-width: 800px;
+  width: 90%;
+  text-align: center;
+  color: white;
+}
+
+.modal-grid {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.modal-grid img {
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid white;
+}
+
+/* closing button*/
+.close-button {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 2rem;
+  cursor: pointer;
+  color: white;
+}
+
+.close-button:hover {
+  color: #ccc;
+}
+
+/* FESTIVALS */
+
+.festivals {
+  height: 646px;
+  background-color: #080808;
+}
+
+/* festivals cover */
+.festivals-cover {
+  position: relative;
+  height: 646px;
+  overflow-y: scroll;
+}
+
+.festivals-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+  z-index: 1;
+}
+
+.festivals-title {
+  position: absolute;
+  top: 232px;
+  left: 553px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+
+  z-index: 2;
+}
+
+h6 {
+  color: var(--white, #fff);
+  text-align: right;
+  -webkit-text-stroke-width: 5px;
+  -webkit-text-stroke-color: var(--black, #000);
+  font-family: var(--font);
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+p {
+  color: #fff;
+  text-align: right;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: var(--black, #000);
+  font-family: "Alfa Slab One";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 1.2px;
+  bottom: 27px;
+}
+
+/* PHOTOSHOOT */
+.photoshoot {
+  background-color: var(--black, #000);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 0 100px 0;
+  gap: 30px;
+}
+
+.photoshoot-title {
+  color: var(--white, #fff);
+  font-family: var(--font, "Alfa Slab One");
+  font-size: 64px;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  padding: 40px;
+}
+
+.vinyl-container {
+  position: relative;
+  width: 700px;
+  height: 700px;
+}
+
+p1 {
+  color: var(--white, #fff);
+  font-family: "Alfa Slab One";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 1.92px;
+}
+
+.photoshoot-content {
+  position: relative;
+  width: 400px;
+  height: 450px;
+}
+.photoshoot-content .vinyl {
+  position: absolute;
+  width: 650px;
+  height: 450px;
+  object-fit: contain;
+  z-index: 1;
+}
+
+.photoshoot-photos {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  overflow-x: scroll;
+}
+
+.photoshoot-content .scroll {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  z-index: 3;
+}
+
+.photoshoot-content .scroll p1 {
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+  letter-spacing: 2px;
+}
+
+/* ME MYSELF & I */
+
+.about-me {
+  position: relative;
+}
+
+.about-me-photo {
+  display: block;
+}
+.about-me-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 50px 70px;
+  box-sizing: border-box;
+}
+
+.about-me-title {
+  width: 1437px;
+  height: 645px;
+  color: #fff;
+  text-align: right;
+  -webkit-text-stroke-width: 8px;
+  -webkit-text-stroke-color: #000;
+  font-family: "Alfa Slab One";
+  font-size: 170px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 32.3px;
+}
+
+.about-me-text {
+  color: #fff;
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: #000;
+  font-family: "Alfa Slab One";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 1.92px;
+  margin-top: 500px;
+}
+
+/* CONTACT */
+.contact {
+  height: 986px;
+  position: relative;
+  background-color: var(--black);
+}
+
+.contact-bg-container {
+  position: relative;
+  height: 100%;
+  overflow: hidden; /* fa que no sobresurti el contingut de la capsa */
+}
+
+.contact-overlay-content {
+  position: absolute;
+  inset: 0;
+  padding: 60px 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 2;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--white, #fff);
+  font-family: var(--font, "Alfa Slab One");
+  font-size: 18px;
+}
+
+.contact-icon {
+  width: 40px;
+  height: 40px;
+}
+
+/* AI research the part where to write */
+.contact-main-heading {
+  color: var(--white, #fff);
+  font-family: var(--font, "Alfa Slab One");
+  font-size: 43px;
+  text-align: center;
+  margin-top: -40px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 380px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  background-color: rgba(219, 219, 219, 0.7);
+  border: none;
+  padding: 12px 16px;
+  font-family: var(--font, "Alfa Slab One");
+  font-size: 14px;
+  color: #000;
+  outline: none;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.submit-btn {
+  align-self: flex-start;
+  background-color: #000;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 10px 24px;
+  font-family: var(--font, "Alfa Slab One");
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+/* adaptar el contingut (copilot searched) */
+@media (max-width: 1100px) {
+  .cover,
+  .index,
+  .myprojects,
+  .me-myself-i,
+  .contact {
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+
+  .cover {
+    width: 100%;
+    height: 70vw;
+    min-height: 600px;
+  }
+
+  h1,
+  h3 {
+    width: 100%;
+    height: auto;
+    font-size: clamp(120px, 30vw, 300px);
+    letter-spacing: 0.1em;
+  }
+
+  .cover-title1 {
+    top: 8%;
+    left: 5%;
+    right: 5%;
+    width: 90%;
+  }
+
+  .container-photo1 {
+    width: 90%;
+  }
+
+  .container-photo1 img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .index img,
+  .festivals-cover img,
+  .about-me-photo,
+  .photoshoot-photos img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .index img {
+    width: 100%;
+    display: block;
+  }
+
+  .festivals-cover,
+  .festivals-cover img,
+  .about-me-photo {
+    width: 100%;
+  }
+
+  .photoshoot-photos img {
+    flex: 0 0 auto;
+    max-height: 100%;
+  }
+
+  .crowd {
+    height: clamp(495px, 72.75vw, 1100px);
+  }
+
+  .crowd-video,
+  .crowd-video img,
+  .crowd-video video {
+    width: 100%;
+    height: 100%;
+  }
+
+  .crowd-video img,
+  .crowd-video video {
+    object-fit: cover;
+  }
+
+  .crowd-title {
+    transform: scale(clamp(0.45, 6.61vw, 1));
+    transform-origin: top left;
+  }
+
+  h2 {
+    width: 100%;
+    height: auto;
+    font-size: clamp(100px, 25vw, 250px);
+    letter-spacing: 0.08em;
+  }
+
+  h4 {
+    font-size: clamp(80px, 16vw, 190px);
+    letter-spacing: 0.1em;
+  }
+
+  .artist1-title,
+  .artist2-title,
+  .artist3-title {
+    font-size: clamp(80px, 18vw, 200px);
+  }
+
+  .festivals-title {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .photoshoot-title {
+    max-width: 100%;
+    padding: 40px 24px;
+    font-size: clamp(40px, 7vw, 64px);
+    text-align: center;
+  }
+
+  .vinyl-container {
+    width: min(700px, 90vw);
+    height: min(700px, 90vw);
+  }
+
+  .about-me-content {
+    width: 100%;
+    padding: 40px 24px;
+  }
+
+  .about-me-title {
+    width: 100%;
+    height: auto;
+    font-size: clamp(80px, 12vw, 170px);
+    letter-spacing: 0.1em;
+  }
+
+  .about-me-text {
+    margin-top: 250px;
+    font-size: clamp(20px, 3vw, 32px);
+  }
+
+  .contact {
+    height: auto;
+    min-height: 700px;
+  }
+
+  .contact-overlay-content {
+    padding: 40px 24px;
+  }
+
+  .contact-form {
+    width: min(380px, 100%);
+  }
+}
